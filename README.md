@@ -60,14 +60,14 @@ You can instruct your CLI to use one of the tools to answer a question.
 
 **What happens:** The AI CLI interprets this, finds the `grok_tool.py` script, and executes it with the question as an argument.
 
-### Example 2: Summarizing a File
+### Example 2: Summarizing Files
 
-To have the CLI summarize a file, you would reference the file in your prompt.
+To have the CLI summarize files, you would reference them in your prompt, delegating the file-reading task to the tool itself.
 
 **Prompt for an AI CLI:**
-> "Read `@article1.md` and `@article2.md`, then use the `openai_tool` to summarize their key points."
+> "Use the `openai_tool` to summarize the key points of `@article1.md` and `@article2.md`."
 
-**What happens:** The AI CLI reads the content of the specified files and passes it along with your prompt to the `openai_tool.py` script.
+**What happens:** The AI CLI identifies the file paths in your prompt and passes them as arguments to the `openai_tool.py` script, which then reads the files directly.
 
 ### Example 3: Fact-Checking a Document
 
