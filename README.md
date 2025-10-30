@@ -40,6 +40,17 @@ Integrating multiple AI models into a single CLI workflow provides several advan
         export OPENAI_API_KEY="your_openai_api_key_here"
         ```
 
+### Claude Tool (`claude_tool.py`)
+
+-   **Purpose**: Interact with the Claude AI model. It supports the model's built-in web search capabilities.
+-   **Prerequisites**:
+    1.  Python 3.x
+    2.  Anthropic Python library: `pip install anthropic`
+    3.  API Key: Set the `ANTHROPIC_API_KEY` environment variable.
+        ```bash
+        export ANTHROPIC_API_KEY="your_anthropic_api_key_here"
+        ```
+
 ## Usage in an AI-Powered CLI (e.g., Gemini CLI)
 
 These tools are designed to be called by an AI-powered CLI. You would typically instruct your CLI to use a specific tool to accomplish a task. The CLI would then use the corresponding Python script to execute your request.
@@ -47,7 +58,7 @@ These tools are designed to be called by an AI-powered CLI. You would typically 
 To enable this, you can first instruct the CLI to learn about the tools by reading their markdown documentation.
 
 **Prompt for an AI CLI:**
-> "Learn the tools in this directory by reading `@grok_tool.md` and `@openai_tool.md`"
+> "Learn the tools in this directory by reading `@grok_tool.md`, `@openai_tool.md` and `@claude_tool.md`"
 
 Once the CLI is aware of the tools, you can use them as follows.
 
