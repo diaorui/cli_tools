@@ -13,7 +13,6 @@ def ask_grok(question):
         tools=[
             web_search(),
             x_search(),
-            code_execution(),
         ],
     )
 

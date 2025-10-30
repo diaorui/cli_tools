@@ -20,7 +20,7 @@ Integrating multiple AI models into a single CLI workflow provides several advan
 
 ### Grok AI Tool (`grok_tool.py`)
 
--   **Purpose**: Interact with the Grok AI model.
+-   **Purpose**: Interact with the Grok AI model. It supports the model's built-in web search and X search capabilities.
 -   **Prerequisites**:
     1.  Python 3.x
     2.  xAI SDK: `pip install xai-sdk`
